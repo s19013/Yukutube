@@ -1,0 +1,131 @@
+.Header {
+  text-align: center;
+}
+
+.search{
+  padding: 10px 0;
+}
+
+.MR {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+@media screen and (min-width:781px){
+  .search {
+    display: grid;
+    grid-template-columns:3fr 3fr 1fr 3fr;
+  }
+
+  .search > .TextField{
+    grid-column: 2/3;
+  }
+  select {
+    font-size: 150%
+  }
+
+  p{
+    padding:0 10px;
+    margin: 0px;
+  }
+
+  .label p{
+    text-align: center;
+    font-size: 120%
+  }
+
+
+  .Sorting {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding:10px 0;
+  }
+
+  .Before {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding:10px 0;
+  }
+
+  .After {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding:0 0 10px;
+  }
+}
+
+@media screen and (max-width:780px){
+  .search {
+    display: grid;
+    grid-template-columns:1fr 3fr 1fr 1fr;
+  }
+
+  .search > .TextField{
+    grid-column: 2/3;
+  }
+
+  .MR p{
+    margin: 0 1em 0 0 ;
+    font-size: 120%
+  }
+
+
+  .Sorting p{
+    margin: 5px;
+    text-align: center;
+    font-size: 120%
+  }
+
+  .Sorting select{
+    padding: 6px;
+    margin: 0 0 10px;
+  }
+
+  .label p{
+    text-align: center;
+    font-size: 120%
+  }
+
+  .Before {
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;
+    padding:0 0 20px
+  }
+
+  .Before select {
+    height: 40px;
+    padding:10px 0;
+    margin: 10px 0;
+    grid-column: 2/4;
+  }
+  .Before p {
+    padding: 10px ;
+    margin: 5px 0;
+    grid-column: 5/7;
+    font-size: 120%
+  }
+  .After {
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  .After select {
+    height: 40px;
+    padding:10px 0;
+    margin: 10px 0;
+    grid-column: 2/4;
+  }
+
+  .After p {
+    padding: 10px ;
+    margin: 5px 0;
+    grid-column: 5/7;
+    font-size: 120%
+  }
+
+
+}

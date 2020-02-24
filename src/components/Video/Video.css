@@ -1,0 +1,65 @@
+/* html, body { height: 100%; } */
+.video {
+  text-align: center;
+}
+
+h2 {
+  text-align: left;
+  margin: 0.5em;
+  font-size: 150%
+}
+
+/* iframe {
+  text-align: center;
+} */
+@media screen and (min-width:781px){
+  .Player {
+    text-align: center;
+    margin: 0 10em;
+  }
+
+  .info {
+    text-align: center;
+    /* margin: 0 10em; */
+  }
+
+  .info h2{
+    margin:0 10em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  .info p {
+    margin: 0 10em;
+    text-align: left;
+    font-size: 100%;
+  }
+
+
+  p {
+    text-align: left;
+    font-size: 200%;
+  }
+
+
+}
+
+@media screen and (max-width:780px){
+  .Player {
+    text-align: center;
+  }
+
+  .info {
+    text-align: center;
+  }
+
+  p {
+    text-align: left;
+    font-size: 90%;
+  }
+
+
+}
+
+
