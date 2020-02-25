@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Chelsea+Market&display=swap');
 .Header {
   text-align: center;
+}
+h1 {
+  font-family: 'Chelsea Market', ;
 }
 
 .search{
