@@ -1,7 +1,8 @@
 {
-  "name": "gametube",
+  "name": "Yukutube",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://s19013.github.io/Yukutube",
   "dependencies": {
     "@material-ui/core": "^4.9.4",
     "@testing-library/jest-dom": "^4.2.4",
@@ -19,6 +20,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
@@ -35,5 +37,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
   }
 }
