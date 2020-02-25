@@ -103,13 +103,13 @@ const App = () => {
     }
     // 閏年
     if (BM === 2 && (newBDate[2] > 29)) {
-      if ((newBDate[0]%4 == 0) && (newBDate[0]%100 != 0) || (newBDate[0]%400 == 0)) {
+      if ((newBDate[0]%4 === 0) && (newBDate[0]%100 !== 0) || (newBDate[0]%400 === 0)) {
         newBDate[2] = 29
       }
       else newBDate[2] = 28
     }
     if (AM === 2 && (newADate[2] > 29)) {
-      if ((newADate[0]%4 == 0) && (newADate[0]%100 != 0) || (newADate[0]%400 == 0)) {
+      if ((newADate[0]%4 === 0) && (newADate[0]%100 !== 0) || (newADate[0]%400 === 0)) {
         newADate[2] = 29
       }
       else newADate[2] = 28
