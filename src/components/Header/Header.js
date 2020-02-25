@@ -122,6 +122,7 @@ const Header = (props) => {
 
   return(
     <div className="Header">
+      <h1 className="logo"></h1>
       <div className="search">
       <TextField
         className="TextField"
