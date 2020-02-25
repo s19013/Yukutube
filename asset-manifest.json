@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Yukutube/static/css/main.7afd95da.chunk.css",
-    "main.js": "/Yukutube/static/js/main.293b44fe.chunk.js",
-    "main.js.map": "/Yukutube/static/js/main.293b44fe.chunk.js.map",
+    "main.js": "/Yukutube/static/js/main.2cb4b322.chunk.js",
+    "main.js.map": "/Yukutube/static/js/main.2cb4b322.chunk.js.map",
     "runtime-main.js": "/Yukutube/static/js/runtime-main.4b522d29.js",
     "runtime-main.js.map": "/Yukutube/static/js/runtime-main.4b522d29.js.map",
     "static/js/2.92d79c12.chunk.js": "/Yukutube/static/js/2.92d79c12.chunk.js",
     "static/js/2.92d79c12.chunk.js.map": "/Yukutube/static/js/2.92d79c12.chunk.js.map",
     "index.html": "/Yukutube/index.html",
-    "precache-manifest.2e60fb1f07ce5276e4ad0212d17afb89.js": "/Yukutube/precache-manifest.2e60fb1f07ce5276e4ad0212d17afb89.js",
+    "precache-manifest.01df85badeaf26493e878bd31ba223e5.js": "/Yukutube/precache-manifest.01df85badeaf26493e878bd31ba223e5.js",
     "service-worker.js": "/Yukutube/service-worker.js",
     "static/css/main.7afd95da.chunk.css.map": "/Yukutube/static/css/main.7afd95da.chunk.css.map",
     "static/js/2.92d79c12.chunk.js.LICENSE.txt": "/Yukutube/static/js/2.92d79c12.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.4b522d29.js",
     "static/js/2.92d79c12.chunk.js",
     "static/css/main.7afd95da.chunk.css",
-    "static/js/main.293b44fe.chunk.js"
+    "static/js/main.2cb4b322.chunk.js"
   ]
 }
