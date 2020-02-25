@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Yukutube/precache-manifest.d083c593d3d268340a8801ebcfbb4855.js"
+  "/Yukutube/precache-manifest.3ff25ef55cfebd9a5db80e854d07310b.js"
 );
 
 self.addEventListener('message', (event) => {
