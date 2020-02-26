@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a1a8ead616a5e975fda135d1d7c58a7e",
+    "revision": "50737bc58760c970b692d9fd6cb1ca89",
     "url": "/Yukutube/index.html"
   },
   {
-    "revision": "4e592d3368d1f58266b4",
-    "url": "/Yukutube/static/css/main.4a367dfe.chunk.css"
+    "revision": "28ab532e5950387ab4ce",
+    "url": "/Yukutube/static/css/main.a68d2314.chunk.css"
   },
   {
     "revision": "c13b59b2ff9722ffe57a",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Yukutube/static/js/2.92d79c12.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4e592d3368d1f58266b4",
+    "revision": "28ab532e5950387ab4ce",
     "url": "/Yukutube/static/js/main.7d062063.chunk.js"
   },
   {
