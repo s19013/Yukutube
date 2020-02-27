@@ -4,12 +4,10 @@ import './Video.css'
 const Video = (props) => {
   if (!props.video) {
     return(
-      <div className="video col-md-8" style={{backgroundColor:"blue"}}>
-        読み込み中
-      </div>
-
+        <div className="loader-wrap">
+          <div className="loader">Loading...</div>
+        </div>
     )
-
     // className="embed-responsive-item"
   }
     const videoURL = 'https://www.youtube.com/embed/' + props.video.id.videoId;
@@ -26,10 +24,6 @@ const Video = (props) => {
       </div>
       <div className="info">
         <h2>{props.video.snippet.title}</h2>
-        <details>
-          <summary>詳細</summary>
-          <p>{props.video.snippet.description}</p>
-        </details>
       </div>
     </div>
     )

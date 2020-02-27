@@ -17,7 +17,7 @@ const Header = (props) => {
   },[])
 // プルダウンを作る
   const makeYearPullDown = () => {
-    for (var i = today[0]; i > 2000 ; i --) {
+    for (var i = today[0]; i > 2004 ; i --) {
       var select = document.getElementById("BYear");
       var option = document.createElement("option");
       option.text = i
@@ -63,7 +63,7 @@ const Header = (props) => {
   }
 //
   const setPullDown = () => {
-    document.getElementById("AYear").value = 2001
+    document.getElementById("AYear").value = 2005
     // document.getElementById("AYear").value = after[0]
     // document.getElementById("AMonth").options[after[1]-1].selected = true
     // document.getElementById("ADate").options[after[2]-1].selected = true
@@ -122,8 +122,8 @@ const Header = (props) => {
 
   return(
     <div className="Header">
-      <h1 className="logo">YukuTube</h1>
       <div className="search">
+        <h1 className="logo">YukuTube</h1>
       <TextField
         className="TextField"
         id="standard-basic"
@@ -131,7 +131,7 @@ const Header = (props) => {
         onChange = {onInputChangeHandler}
         value = {keyword}
          />
-      <Button onClick={props.onClick} variant="contained" color="secondary">検索</Button>
+       <Button className="Button" onClick={props.onClick} variant="contained" color="secondary">検索</Button>
 
       </div>
       <div className="MR">
