@@ -2,11 +2,10 @@ import React, {useState, useEffect} from 'react';
 import './Header.css';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
+
 const Header = (props) => {
-  const [keyword,setKeyword] = useState('')
-  const today = props.BDate
-  // const after = props.ADate
-  // const thisYear = today[0]
+  const [keyword,setKeyword] = useState('')//検索キーワード
+  const today = props.BDate//今日の日付
   useEffect(() => {
     makeMaxResultPullDown()
     makeYearPullDown()
@@ -15,15 +14,18 @@ const Header = (props) => {
     setPullDown()
     console.log(today);
   },[])
+
 // プルダウンを作る
   const makeYearPullDown = () => {
     for (var i = today[0]; i > 2004 ; i --) {
+      //開始日
       var select = document.getElementById("BYear");
       var option = document.createElement("option");
       option.text = i
       option.value = i
       select.appendChild(option)
 
+      //終了日
       var select = document.getElementById("AYear");
       var option = document.createElement("option");
       option.text = i
@@ -33,12 +35,14 @@ const Header = (props) => {
   }
   const makeMonthPullDown = () => {
     for (var i = 1; i <= 12 ; i ++) {
+      //開始日
       var select = document.getElementById("BMonth");
       var option = document.createElement("option");
       option.text = i
       option.value = i
       select.appendChild(option)
 
+      //終了日
       var select = document.getElementById("AMonth");
       var option = document.createElement("option");
       option.text = i
@@ -46,14 +50,17 @@ const Header = (props) => {
       select.appendChild(option)
     }
   }
+
   const makeDatePullDown = () => {
     for (var i =1 ; i <= 31 ; i ++) {
+      //開始日
       var select = document.getElementById("BDate");
       var option = document.createElement("option");
       option.text = i
       option.value = i
       select.appendChild(option)
 
+      //終了日
       var select = document.getElementById("ADate");
       var option = document.createElement("option");
       option.text = i
@@ -82,29 +89,35 @@ const Header = (props) => {
     }
   }
 
-// handler
+   //入力欄の文字を受け取る
   const onInputChangeHandler = (e) => {
     setKeyword(e.target.value)
     props.onKeywordChanged(e.target.value)
   }
 
+  //maxResultの変更を受け取る
   const onChangedMRHandler =() => {
     props.onChangeMR(document.getElementById("MRsize").value)
   }
 
+  //
   const onChangedOrderHandler =() => {
     props.onChangeOrder(document.getElementById("Order").value)
   }
 
+  //並び替えの変更
   const onChangedBDateHandler = (id) => {
-    if (id === 0) {
-      props.onChangeBDate(id,document.getElementById("BYear").value)
-    }
-    if (id === 1) {
-      props.onChangeBDate(id,document.getElementById("BMonth").value)
-    }
-    if (id === 2) {
-      props.onChangeBDate(id,document.getElementById("BDate").value)
+    // eslint-disable-next-line default-case
+    switch (id) {
+      case 0:
+        props.onChangeBDate(id,document.getElementById("BYear").value) 
+      break;
+      case 1:
+        props.onChangeBDate(id,document.getElementById("BMonth").value)
+      break;
+      case 2:
+        props.onChangeBDate(id,document.getElementById("BDate").value)
+      break;
     }
   }
 
@@ -175,9 +188,3 @@ const Header = (props) => {
 }
 
 export default Header;
-// <button onClick={props.onClick}>検索</button>
-// <input
-//   type="text"
-//   onChange = {onInputChangeHandler}
-//   value = {keyword}
-// />
