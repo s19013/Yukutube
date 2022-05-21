@@ -31,8 +31,8 @@ const Header = (props) => {
       select.appendChild(option)
 
       //終了日
-      var select = document.getElementById("AYear");
-      var option = document.createElement("option");
+      select = document.getElementById("AYear");
+      option = document.createElement("option");
       option.text = i
       option.value = i
       select.appendChild(option)
@@ -48,8 +48,8 @@ const Header = (props) => {
       select.appendChild(option)
 
       //終了日
-      var select = document.getElementById("AMonth");
-      var option = document.createElement("option");
+      select = document.getElementById("AMonth");
+      option = document.createElement("option");
       option.text = i
       option.value = i
       select.appendChild(option)
@@ -66,8 +66,8 @@ const Header = (props) => {
       select.appendChild(option)
 
       //終了日
-      var select = document.getElementById("ADate");
-      var option = document.createElement("option");
+      select = document.getElementById("ADate");
+      option = document.createElement("option");
       option.text = i
       option.value = i
       select.appendChild(option)
@@ -99,7 +99,7 @@ const Header = (props) => {
    //入力欄の文字を受け取る
   const onInputChangeHandler = (e) => {
     setKeyword(e.target.value)
-    props.onKeywordChanged(e.target.value)
+    props.onKeywordChanged(e.target.value) //親のApp.jsにわたす
   }
 
   //maxResultの変更を受け取る
