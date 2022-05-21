@@ -3,9 +3,9 @@ import './Header.css';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 
+//props -> App.jsのデータを取ってきてる?
 const Header = (props) => {
   const [keyword,setKeyword] = useState('')//検索キーワード
-  const today = props.BDate//今日の日付
   const year  = 0
   const month = 1
   const date  = 2
@@ -15,12 +15,14 @@ const Header = (props) => {
     makeMonthPullDown()
     makeDatePullDown()
     setPullDown()
-    console.log(today);
+    console.log(props);
+    console.log(props.BDate[0]);
   },[])
 
 // プルダウンを作る
+
   const makeYearPullDown = () => {
-    for (var i = today[0]; i > 2004 ; i --) {
+    for (var i = props.BDate[year]; i > 2004 ; i --) {
       //開始日
       var select = document.getElementById("BYear");
       var option = document.createElement("option");
@@ -74,13 +76,14 @@ const Header = (props) => {
 
 //日付のプルダウンを作る
   const setPullDown = () => {
-    document.getElementById("AYear").value = today[0] - 5
-    document.getElementById("AMonth").options[today[1]-1].selected = true
-    document.getElementById("ADate").options[today[2]-1].selected = true
 
-    document.getElementById("BYear").value = today[0]
-    document.getElementById("BMonth").options[today[1]-1].selected = true
-    document.getElementById("BDate").options[today[2]-1].selected = true
+    document.getElementById("AYear" ).value = props.ADate[year]
+    document.getElementById("AMonth").options[props.ADate[month]-1].selected = true
+    document.getElementById("ADate" ).options[props.ADate[date]-1 ].selected = true
+
+    document.getElementById("BYear" ).value = props.BDate[year]
+    document.getElementById("BMonth").options[props.BDate[month]-1].selected = true
+    document.getElementById("BDate" ).options[props.BDate[date]-1 ].selected = true
   }
 // #sonota
   const makeMaxResultPullDown = () => {
@@ -123,7 +126,6 @@ const Header = (props) => {
       case date:
         props.onChangeBDate(id,document.getElementById("BDate").value)
       break;
-      
     }
   }
 
