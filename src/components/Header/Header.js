@@ -6,6 +6,9 @@ import TextField from '@material-ui/core/TextField';
 const Header = (props) => {
   const [keyword,setKeyword] = useState('')//検索キーワード
   const today = props.BDate//今日の日付
+  const year  = 0
+  const month = 1
+  const date  = 2
   useEffect(() => {
     makeMaxResultPullDown()
     makeYearPullDown()
@@ -68,12 +71,13 @@ const Header = (props) => {
       select.appendChild(option)
     }
   }
-//
+
+//日付のプルダウンを作る
   const setPullDown = () => {
-    document.getElementById("AYear").value = 2005
-    // document.getElementById("AYear").value = after[0]
-    // document.getElementById("AMonth").options[after[1]-1].selected = true
-    // document.getElementById("ADate").options[after[2]-1].selected = true
+    document.getElementById("AYear").value = today[0] - 5
+    document.getElementById("AMonth").options[today[1]-1].selected = true
+    document.getElementById("ADate").options[today[2]-1].selected = true
+
     document.getElementById("BYear").value = today[0]
     document.getElementById("BMonth").options[today[1]-1].selected = true
     document.getElementById("BDate").options[today[2]-1].selected = true
@@ -100,24 +104,26 @@ const Header = (props) => {
     props.onChangeMR(document.getElementById("MRsize").value)
   }
 
-  //
+  //並び替えの変更
   const onChangedOrderHandler =() => {
     props.onChangeOrder(document.getElementById("Order").value)
   }
 
-  //並び替えの変更
+  //検索はじめの日付の変更
+  //idによって変更する部分を分岐
   const onChangedBDateHandler = (id) => {
     // eslint-disable-next-line default-case
     switch (id) {
-      case 0:
+      case year:
         props.onChangeBDate(id,document.getElementById("BYear").value) 
       break;
-      case 1:
+      case month:
         props.onChangeBDate(id,document.getElementById("BMonth").value)
       break;
-      case 2:
+      case date:
         props.onChangeBDate(id,document.getElementById("BDate").value)
       break;
+      
     }
   }
 
@@ -167,19 +173,19 @@ const Header = (props) => {
             <p>日時指定</p>
           </div>
           <div className="Before">
-              <select id="BYear" onChange={(id) => onChangedBDateHandler(0)}></select>
+              <select id="BYear" onChange={(id) => onChangedBDateHandler(year)}></select>
               <p>年</p>
-              <select id="BMonth" onChange={(id) => onChangedBDateHandler(1)}></select>
+              <select id="BMonth" onChange={(id) => onChangedBDateHandler(month)}></select>
               <p>月</p>
-              <select id="BDate" onChange={(id) => onChangedBDateHandler(2)}></select>
+              <select id="BDate" onChange={(id) => onChangedBDateHandler(date)}></select>
               <p>日から</p>
           </div>
           <div className="After">
-            <select id="AYear" onChange={(id) => onChangedADateHandler(0)}></select>
+            <select id="AYear" onChange={(id) => onChangedADateHandler(year)}></select>
             <p>年</p>
-            <select id="AMonth" onChange={(id) => onChangedADateHandler(1)}></select>
+            <select id="AMonth" onChange={(id) => onChangedADateHandler(month)}></select>
             <p>月</p>
-            <select id="ADate" onChange={(id) => onChangedADateHandler(2)}></select>
+            <select id="ADate" onChange={(id) => onChangedADateHandler(date)}></select>
             <p>日まで</p>
           </div>
       </details>
