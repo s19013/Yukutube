@@ -87,7 +87,7 @@ const Header = (props) => {
   }
 // #sonota
   const makeMaxResultPullDown = () => {
-    for (var i = 5; i <= 50 ; i += 5) {
+    for (var i = 10; i <= 50 ; i += 5) {
       var select = document.getElementById("MRsize");
       var option = document.createElement("option");
       option.text = i
