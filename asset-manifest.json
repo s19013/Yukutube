@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Yukutube/static/css/main.51534b44.chunk.css",
+    "main.js": "/Yukutube/static/js/main.755221ae.chunk.js",
+    "main.js.map": "/Yukutube/static/js/main.755221ae.chunk.js.map",
+    "runtime-main.js": "/Yukutube/static/js/runtime-main.03c688dc.js",
+    "runtime-main.js.map": "/Yukutube/static/js/runtime-main.03c688dc.js.map",
+    "static/js/2.a77cad7f.chunk.js": "/Yukutube/static/js/2.a77cad7f.chunk.js",
+    "static/js/2.a77cad7f.chunk.js.map": "/Yukutube/static/js/2.a77cad7f.chunk.js.map",
+    "index.html": "/Yukutube/index.html",
+    "precache-manifest.98561ad7e9ee79e6cb45737bf2afb0cd.js": "/Yukutube/precache-manifest.98561ad7e9ee79e6cb45737bf2afb0cd.js",
+    "service-worker.js": "/Yukutube/service-worker.js",
+    "static/css/main.51534b44.chunk.css.map": "/Yukutube/static/css/main.51534b44.chunk.css.map",
+    "static/js/2.a77cad7f.chunk.js.LICENSE.txt": "/Yukutube/static/js/2.a77cad7f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.03c688dc.js",
+    "static/js/2.a77cad7f.chunk.js",
+    "static/css/main.51534b44.chunk.css",
+    "static/js/main.755221ae.chunk.js"
+  ]
+}
