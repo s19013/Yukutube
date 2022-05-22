@@ -4,6 +4,7 @@
 
 * publishedAfter: options.publishedAfter,
 * publishedBefore: options.publishedBefore,
+* order:options.order,
 * maxResults: options.maxResults,
 
 追加したらreactを再起動する  
