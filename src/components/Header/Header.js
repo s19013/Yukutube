@@ -20,63 +20,50 @@ const Header = (props) => {
   },[])
 
 // プルダウンを作る
-
   const makeYearPullDown = () => {
-    for (var i = props.BDate[year]; i > 2004 ; i --) {
-      //開始日
-      var select = document.getElementById("BYear");
-      var option = document.createElement("option");
-      option.text = i
-      option.value = i
-      select.appendChild(option)
-
-      //終了日
-      select = document.getElementById("AYear");
-      option = document.createElement("option");
-      option.text = i
-      option.value = i
-      select.appendChild(option)
+    var select = null;
+    for (let ba = 0; ba < 2; ba++) {
+      if (ba === 0) {select = document.getElementById("BYear");}
+      else          {select = document.getElementById("AYear");}
+      for (var i = props.BDate[year]; i > 2004 ; i --) {
+        var option = document.createElement("option");
+        option.text = i
+        option.value = i
+        select.appendChild(option)
+      }
     }
   }
-  const makeMonthPullDown = () => {
-    for (var i = 1; i <= 12 ; i ++) {
-      //開始日
-      var select = document.getElementById("BMonth");
-      var option = document.createElement("option");
-      option.text = i
-      option.value = i
-      select.appendChild(option)
 
-      //終了日
-      select = document.getElementById("AMonth");
-      option = document.createElement("option");
-      option.text = i
-      option.value = i
-      select.appendChild(option)
+  const makeMonthPullDown = () => {
+    var select = null;
+    for (let ba = 0; ba < 2; ba++) {
+      if (ba === 0) {select = document.getElementById("BMonth");}
+      else          {select = document.getElementById("AMonth");}
+      for (var i = 1; i <= 12 ; i ++) {
+        var option = document.createElement("option");
+        option.text = i
+        option.value = i
+        select.appendChild(option)
+      }
     }
   }
 
   const makeDatePullDown = () => {
-    for (var i =1 ; i <= 31 ; i ++) {
-      //開始日
-      var select = document.getElementById("BDate");
-      var option = document.createElement("option");
-      option.text = i
-      option.value = i
-      select.appendChild(option)
-
-      //終了日
-      select = document.getElementById("ADate");
-      option = document.createElement("option");
-      option.text = i
-      option.value = i
-      select.appendChild(option)
+    var select = null;
+    for (let ba = 0; ba < 2; ba++) {
+      if (ba === 0) {select = document.getElementById("BDate");}
+      else          {select = document.getElementById("ADate");}
+      for (var i =1 ; i <= 31 ; i ++) {
+        var option = document.createElement("option");
+        option.text = i
+        option.value = i
+        select.appendChild(option)
+      }
     }
   }
 
 //日付のプルダウンを作る
   const setPullDown = () => {
-
     document.getElementById("AYear" ).value = props.ADate[year]
     document.getElementById("AMonth").options[props.ADate[month]-1].selected = true
     document.getElementById("ADate" ).options[props.ADate[date]-1 ].selected = true
@@ -85,7 +72,8 @@ const Header = (props) => {
     document.getElementById("BMonth").options[props.BDate[month]-1].selected = true
     document.getElementById("BDate" ).options[props.BDate[date]-1 ].selected = true
   }
-// #sonota
+
+// 最大結果数のプルダウンを作る
   const makeMaxResultPullDown = () => {
     for (var i = 10; i <= 50 ; i += 5) {
       var select = document.getElementById("MRsize");
@@ -130,14 +118,17 @@ const Header = (props) => {
   }
 
   const onChangedADateHandler = (id) => {
-    if (id === 0) {
-      props.onChangeADate(id,document.getElementById("AYear").value)
-    }
-    if (id === 1) {
-      props.onChangeADate(id,document.getElementById("AMonth").value)
-    }
-    if (id === 2) {
-      props.onChangeADate(id,document.getElementById("ADate").value)
+    // eslint-disable-next-line default-case
+    switch (id) {
+      case year:
+        props.onChangeBDate(id,document.getElementById("AYear").value) 
+      break;
+      case month:
+        props.onChangeBDate(id,document.getElementById("AMonth").value)
+      break;
+      case date:
+        props.onChangeBDate(id,document.getElementById("ADate").value)
+      break;
     }
   }
 
