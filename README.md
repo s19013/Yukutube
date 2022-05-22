@@ -1,6 +1,7 @@
 # Yukutube
 
 ## url
+https://s19013.github.io/Yukutube/
 
 ## 概要
 youtube data apiを使ってゆっくり系(ゆっくり実況など)を表示する  
