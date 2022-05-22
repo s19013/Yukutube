@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/Yukutube/static/css/main.51534b44.chunk.css",
-    "main.js": "/Yukutube/static/js/main.755221ae.chunk.js",
-    "main.js.map": "/Yukutube/static/js/main.755221ae.chunk.js.map",
+    "main.js": "/Yukutube/static/js/main.812bdcab.chunk.js",
+    "main.js.map": "/Yukutube/static/js/main.812bdcab.chunk.js.map",
     "runtime-main.js": "/Yukutube/static/js/runtime-main.03c688dc.js",
     "runtime-main.js.map": "/Yukutube/static/js/runtime-main.03c688dc.js.map",
-    "static/js/2.7bb30e76.chunk.js": "/Yukutube/static/js/2.7bb30e76.chunk.js",
-    "static/js/2.7bb30e76.chunk.js.map": "/Yukutube/static/js/2.7bb30e76.chunk.js.map",
+    "static/js/2.a8cc828b.chunk.js": "/Yukutube/static/js/2.a8cc828b.chunk.js",
+    "static/js/2.a8cc828b.chunk.js.map": "/Yukutube/static/js/2.a8cc828b.chunk.js.map",
     "index.html": "/Yukutube/index.html",
-    "precache-manifest.f2f116f2ff7dee6466d9c4c85b9ddf39.js": "/Yukutube/precache-manifest.f2f116f2ff7dee6466d9c4c85b9ddf39.js",
+    "precache-manifest.2716eb841a509032824712fd296a957d.js": "/Yukutube/precache-manifest.2716eb841a509032824712fd296a957d.js",
     "service-worker.js": "/Yukutube/service-worker.js",
     "static/css/main.51534b44.chunk.css.map": "/Yukutube/static/css/main.51534b44.chunk.css.map",
-    "static/js/2.7bb30e76.chunk.js.LICENSE.txt": "/Yukutube/static/js/2.7bb30e76.chunk.js.LICENSE.txt"
+    "static/js/2.a8cc828b.chunk.js.LICENSE.txt": "/Yukutube/static/js/2.a8cc828b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.03c688dc.js",
-    "static/js/2.7bb30e76.chunk.js",
+    "static/js/2.a8cc828b.chunk.js",
     "static/css/main.51534b44.chunk.css",
-    "static/js/main.755221ae.chunk.js"
+    "static/js/main.812bdcab.chunk.js"
   ]
 }
