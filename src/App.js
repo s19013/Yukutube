@@ -5,12 +5,12 @@ import Body from './components/Body/Body'
 import List from './components/Video/List/List'
 import Video from './components/Video/Video'
 import YSearch from 'youtube-api-search';
-const API = 'AIzaSyAR8-LzGCEDEbga4PXzdgfssJ_HENLdSk8'
+const API = 'AIzaSyC6GuqIlneXBe1VhyzK-_rxJ3e_ELfuNVU'
 
 const App = () => {
   const d = new Date()
   const [newTerm,setNewTerm] = useState("") //検索キーワード
-  const [newMaxResults,setNewMaxResults] = useState(5) //最大表示数
+  const [newMaxResults,setNewMaxResults] = useState(10) //最大表示数
   const [newOrder,setNewOrder] = useState("relevance") //並び方
   const [BDate,setBDate] = useState([d.getFullYear(),d.getMonth()+1,d.getDate()]) //検索範囲はじめ
   const [ADate,setADate] = useState([d.getFullYear()-5,d.getMonth()+1,d.getDate()]) //検索範囲終わり
@@ -95,7 +95,7 @@ const App = () => {
     },
      (data) => { //データを受け取る
       setVideos(data) //動画保存
-      setSelectedVideo(data[0]) 
+      setSelectedVideo(data[0])
     })
   }
 
