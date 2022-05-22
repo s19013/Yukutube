@@ -17,7 +17,7 @@ const App = () => {
   const [videos,setVideos] = useState([]) //取ってきたビデオ達
   const [selectedVideo,setSelectedVideo] = useState(null) //選んだビデオ(すぐ再生できるビデオ)
   useEffect(() => {
-      YSearch({key:API,term: 'ゆっくり',maxResults:newMaxResults}, (data) => {
+      YSearch({key:API,term: 'ゆっくり',maxResults:10}, (data) => {
         setVideos(data)
         setSelectedVideo(data[0])
       })
